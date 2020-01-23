@@ -1,8 +1,6 @@
 import Sequelize from 'sequelize';
 import { sequelize } from '../database/database';
 
-import Rol from './Rol';
-
 const User = sequelize.define('personas',{
     id:{
         type: Sequelize.INTEGER,
@@ -12,19 +10,16 @@ const User = sequelize.define('personas',{
         type: Sequelize.INTEGER,
     },
     nombre_usuario:{
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
     },
     email:{
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
     },
     clave:{
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
     },
 },{
     timestamps: false
 });
-
-User.hasMany(Rol, { foreignKey: 'id_rol'});
-// Rol.belongsTo(User, { foreignKey: 'id_rol'});
 
 export default User;
