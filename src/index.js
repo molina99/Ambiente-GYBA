@@ -23,6 +23,7 @@ app.use(express.json());
 app.use(require('./routes/index'));
 app.use(require('./routes/users'));
 app.use(require('./routes/roles'));
+app.use(require('./routes/cuentasUser'));
 
 // Public
 

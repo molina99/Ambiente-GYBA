@@ -1,6 +1,8 @@
 import Sequelize from 'sequelize';
 import { sequelize } from '../database/database';
 
+import CuentaUser from './CuentaUser';
+
 const User = sequelize.define('personas',{
     id:{
         type: Sequelize.INTEGER,
@@ -21,5 +23,8 @@ const User = sequelize.define('personas',{
 },{
     timestamps: false
 });
+
+User.hasMany(CuentaUser, { foreignKey: 'id_persona', sourceKey: 'id'});
+CuentaUser.belongsTo(User, { foreignKey: 'id_persona', sourceKey: 'id'});
 
 export default User;
