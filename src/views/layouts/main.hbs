@@ -1,19 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
     <title>BINGO APP</title>
 </head>
+
 <body>
-    
-<p class="bg-red-600">Navigation</p>
 
-{{{ body }}}
+    {{!-- SECTION HEADER --}}
+    <nav class="shadow-md bg-white border-black py-2">
+        <div class="mx-12 relative">
+            <div class="m-auto flex justify-between">
+                <div class="inline-flex">
+                    <a href="#" class="no-underline cursor-pointer">
+                        <img class="w-20" src="img/logo-gyba.png" alt="">
+                    </a>
+                </div>
+                <div class="my-auto">
+                    <ul class="text-sm flex items-center px-6 h-12">
+                        <li><img class="w-6 ml-16" src="img/logout.png"></li>
+                        <a href="#">
+                            <li class="ml-2">Logout</li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    {{!-- FIN SECTION HEADER --}}
 
-<p>Footer</p>
+    {{{ body }}}
 
 </body>
+
 </html>

@@ -26,7 +26,7 @@ app.use(require('./routes/roles'));
 app.use(require('./routes/cuentasUser'));
 
 // Public
-
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Server
 app.listen(port, ()=>{
